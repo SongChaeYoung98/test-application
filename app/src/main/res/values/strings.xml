@@ -9,7 +9,8 @@
     <string name="main_change">화면 전환</string>
 
     <!-- Edit Text -->
-    <string name="edit_text_title">이용안내</string>
+    <string name="edit_text_title">회원가입</string>
+    <string name="edit_text_name_hint">이름을 입력해주세요</string>
 
 
 </resources>

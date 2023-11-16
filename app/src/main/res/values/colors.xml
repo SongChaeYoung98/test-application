@@ -11,4 +11,6 @@
     <color name="main">#172760</color>
     <color name="grey">#C8C8C8</color>
     <color name="basic">#FCFCFC</color>
+
+    <color name="splash">#DCDCDC</color>
 </resources>
