@@ -17,12 +17,27 @@
         android:text="@string/main_default_textView"
         android:textSize="30sp"/>
 
-    <Button
-        android:id="@+id/main_button"
-        android:layout_width="200dp"
-        android:layout_height="55dp"
-        android:text="@string/main_button"
-        android:textColor="@color/black"
-        android:background="@color/grey"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/main_button"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            android:text="@string/main_button"
+            android:textColor="@color/black"
+            android:background="@color/grey"/>
+
+        <Button
+            android:id="@+id/main_change_button"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/grey"
+            android:text="@string/main_change"/>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.testapplication;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.main_textView);
         Button button = findViewById(R.id.main_button);
         LinearLayout parent_layout = findViewById(R.id.main_layout);
+
+        // 과제 4
+        Button button1 = findViewById(R.id.main_change_button);
 
         // 과제 3
         button.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +58,16 @@ public class MainActivity extends AppCompatActivity {
                 button.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
                 textView.setText(R.string.main_default_textView);
                 return false;
+            }
+        });
+
+        // 과제 4
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, edit_text.class);
+                startActivity(intent);
+                finish();
             }
         });
 
