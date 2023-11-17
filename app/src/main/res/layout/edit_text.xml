@@ -60,12 +60,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/edit_Text_name_editText"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
-                android:layout_marginBottom="18dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/login_main_edittext"
                 android:hint="@string/edit_text_name_hint"
@@ -81,8 +83,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:paddingStart="12dp"
                 android:background="@drawable/bg_spinner"
-                android:outlineProvider="none" />
+                android:outlineProvider="none"
+                android:text="@string/edit_text_local"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:textColor="@color/text_default_2"
+                android:textSize="12sp"
+                android:includeFontPadding="false"/>
 
 
         </LinearLayout>
@@ -95,21 +104,55 @@
             android:textSize="12sp"
             android:fontFamily="@font/notosans_regular_ttf"/>
 
-
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="18dp"
-            android:background="@drawable/login_main_edittext"
-            android:layout_gravity="center_vertical"
-            android:hint="@string/edit_text_birth_hint"
-            android:textColorHint="@color/grey"
-            android:textSize="12sp"
-            android:maxLines="1"
-            android:includeFontPadding="false"
-            android:fontFamily="@font/notosans_regular_ttf"
-            android:paddingStart="12dp"
-            android:textColor="@color/black"/>
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/login_main_edittext"
+                android:hint="@string/edit_text_birth_hint"
+                android:textColorHint="@color/grey"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:paddingStart="12dp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/login_main_edittext"
+                android:outlineProvider="none"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:includeFontPadding="false"
+                android:textSize="14sp"
+                android:textColor="@color/text_default_2"
+                android:text="@string/edit_text_male"/>
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="0dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/login_main_edittext"
+                android:outlineProvider="none"
+                android:includeFontPadding="false"
+                android:textSize="14sp"
+                android:textColor="@color/text_default_2"
+                android:text="@string/edit_text_female"/>
+        </LinearLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -143,35 +186,75 @@
             android:textSize="12sp"
             android:fontFamily="@font/notosans_regular_ttf"/>
 
-
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/login_main_edittext"
-            android:layout_gravity="center_vertical"
-            android:hint="@string/edit_text_email_hint"
-            android:textColorHint="@color/grey"
-            android:textSize="12sp"
-            android:maxLines="1"
-            android:includeFontPadding="false"
-            android:fontFamily="@font/notosans_regular_ttf"
-            android:paddingStart="12dp"
-            android:textColor="@color/black"/>
+            android:orientation="horizontal">
 
-        <EditText
+            <EditText
+                android:layout_width="235dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/login_main_edittext"
+                android:hint="@string/edit_text_email_hint"
+                android:textColorHint="@color/grey"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:paddingStart="12dp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="left|center_vertical"
+                android:background="@drawable/bg_spinner"
+                android:outlineProvider="none"
+                android:paddingStart="12dp"
+                android:text="@string/edit_text_direct_input"
+                android:textSize="12sp"
+                android:textColor="@color/text_default_2"/>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/login_main_edittext"
-            android:layout_gravity="center_vertical"
-            android:hint="@string/edit_text_email_num_hint"
-            android:textColorHint="@color/grey"
-            android:textSize="12sp"
-            android:maxLines="1"
-            android:includeFontPadding="false"
-            android:fontFamily="@font/notosans_regular_ttf"
-            android:paddingStart="12dp"
-            android:textColor="@color/black"/>
+            android:layout_height="50dp">
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/login_main_edittext"
+                android:layout_gravity="center_vertical"
+                android:hint="@string/edit_text_email_num_hint"
+                android:textColorHint="@color/grey"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:paddingStart="12dp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_main_stroke"
+                android:outlineProvider="none"
+                android:text="@string/edit_text_auth_req"
+                android:textColor="@color/main"
+                android:textSize="14sp"
+                android:includeFontPadding="false"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
