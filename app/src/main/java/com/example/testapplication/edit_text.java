@@ -2,6 +2,9 @@ package com.example.testapplication;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -21,7 +24,13 @@ public class edit_text extends AppCompatActivity {
         // 과제 5
         Button close_button = findViewById(R.id.edit_text_close_button);
         LinearLayout parent_layout = findViewById(R.id.edit_text_main_layout);
-        EditText name_editText = findViewById(R.id.edit_Text_name_editText);
+        EditText name_editText = findViewById(R.id.edit_text_name_editText);
+
+        // 과제 9
+        EditText birth_editText = findViewById(R.id.edit_text_birth_editText);
+        EditText phone_editText = findViewById(R.id.edit_text_phone_editText);
+        EditText email_editText = findViewById(R.id.edit_text_email_editText);
+        EditText email_num_editText = findViewById(R.id.edit_text_email_num_editText);
 
         // 과제 5
         close_button.setOnClickListener(new View.OnClickListener() {
@@ -31,11 +40,36 @@ public class edit_text extends AppCompatActivity {
             }
         });
 
+        // 과제 9
+        phone_editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                String inputEmail = charSequence.toString();
+
+                Log.d("test", "input : " + inputEmail);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
         parent_layout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
 
-                name_editText.clearFocus();
+                name_editText.clearFocus();     // 과제 5
+                birth_editText.clearFocus();    // 과제 9
+                phone_editText.clearFocus();    // 과제 9
+                email_editText.clearFocus();    // 과제 9
+                email_num_editText.clearFocus();    // 과제 9
 
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(view.getWindowToken(), 0);

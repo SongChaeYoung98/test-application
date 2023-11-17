@@ -65,7 +65,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/edit_Text_name_editText"
+                android:id="@+id/edit_text_name_editText"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="8dp"
@@ -112,6 +112,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/edit_text_birth_editText"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="8dp"
@@ -162,21 +163,35 @@
             android:textSize="12sp"
             android:fontFamily="@font/notosans_regular_ttf"/>
 
-
-        <EditText
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="18dp"
-            android:background="@drawable/login_main_edittext"
-            android:layout_gravity="center_vertical"
-            android:hint="@string/edit_text_phone_hint"
-            android:textColorHint="@color/grey"
-            android:textSize="12sp"
-            android:maxLines="1"
-            android:includeFontPadding="false"
-            android:fontFamily="@font/notosans_regular_ttf"
-            android:paddingStart="12dp"
-            android:textColor="@color/black"/>
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_text_phone_editText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/login_main_edittext"
+                android:hint="@string/edit_text_phone_hint"
+                android:textColorHint="@color/grey"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:paddingStart="12dp"
+                android:textColor="@color/black"
+                android:inputType="numberPassword"/>
+            
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_visible"
+                android:layout_gravity="end"/>
+
+        </FrameLayout>
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -193,6 +208,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/edit_text_email_editText"
                 android:layout_width="235dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="8dp"
@@ -229,6 +245,7 @@
             android:layout_height="50dp">
 
             <EditText
+                android:id="@+id/edit_text_email_num_editText"
                 android:layout_width="250dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="8dp"
