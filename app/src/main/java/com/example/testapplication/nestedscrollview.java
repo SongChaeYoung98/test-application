@@ -1,7 +1,12 @@
 package com.example.testapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -42,9 +47,82 @@ public class nestedscrollview extends AppCompatActivity {
         nestedscrollview_adapter adapter_1 = new nestedscrollview_adapter(userNames, userNumbers);
         recyclerView_1.setAdapter(adapter_1);
 
+        recyclerView_0.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
+            @Override
+            public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
+                return true;
+            }
+
+            @Override
+            public void onTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
+                View childView = rv.findChildViewUnder(e.getX(), e.getY());
+
+                if (childView != null && e.getAction() == MotionEvent.ACTION_UP) {
+                    int position = rv.getChildAdapterPosition(childView);
+
+                    if (position != RecyclerView.NO_POSITION) {
+                        String userName = userNames.get(position);
+                        String userNumber = userNumbers.get(position);
+
+                        Log.d("RecyclerView Click", "Position : " + position + ", UserName : " + userName +
+                                ", UserNumber : " + userNumber);
+
+                        Intent intent = new Intent(nestedscrollview.this, user_profile.class);
+                        intent.putExtra("userName", userName);
+                        intent.putExtra("userNumber", userNumber);
+                        startActivity(intent);
+                        onPause();
+                    }
+                }
+
+            }
+
+            @Override
+            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
+            }
+        });
+
+        recyclerView_1.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
+            @Override
+            public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
+                return true;
+            }
+
+            @Override
+            public void onTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
+                View childView = rv.findChildViewUnder(e.getX(), e.getY());
+
+                if (childView != null && e.getAction() == MotionEvent.ACTION_UP) {
+                    int position = rv.getChildAdapterPosition(childView);
+
+                    if (position != RecyclerView.NO_POSITION) {
+                        String userName = userNames.get(position);
+                        String userNumber = userNumbers.get(position);
+
+                        Log.d("RecyclerView Click", "Position : " + position + ", UserName : " + userName +
+                                ", UserNumber : " + userNumber);
+
+                        Intent intent = new Intent(nestedscrollview.this, user_profile.class);
+                        intent.putExtra("userName", userName);
+                        intent.putExtra("userNumber", userNumber);
+                        startActivity(intent);
+                        onPause();
+                    }
+                }
+
+            }
+
+            @Override
+            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
+            }
+        });
+
     }
 
-    // generating test phone number data (dummy data)
+
+    // 과제 12
     private int generateRandomNumber() {
         Random random = new Random();
         return random.nextInt(10000);

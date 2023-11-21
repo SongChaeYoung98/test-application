@@ -34,6 +34,10 @@
             android:name=".nestedscrollview"
             android:exported="true"
             android:launchMode="singleTop"/>
+        <activity
+            android:name=".user_profile"
+            android:exported="true"
+            android:launchMode="singleTop"/>
 
     </application>
 

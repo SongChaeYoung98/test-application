@@ -42,8 +42,7 @@ public class nestedscrollview_adapter extends RecyclerView.Adapter<nestedscrollv
                 currentUserNumber.substring(3, 7), currentUserNumber.substring(7));
 
         holder.userNameTextView.setText(currentUserName);
-//        holder.userNumberTextView.setText(formattedUserNumber);
-        holder.userNumberTextView.setText(currentUserNumber);
+        holder.userNumberTextView.setText(formattedUserNumber);
     }
 
     @Override
