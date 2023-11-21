@@ -10,7 +10,7 @@ public class init extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = new Intent(init.this, nestedscrollview.class);
+        Intent intent = new Intent(init.this, MainActivity.class);
         startActivity(intent);
         finish();
     }
