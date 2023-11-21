@@ -1,6 +1,7 @@
 package com.example.testapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -36,6 +37,9 @@ public class edit_text extends AppCompatActivity {
 
         // 과제 10
         Button visible_button = findViewById(R.id.edit_text_visible_button);
+
+        // 과제 11
+        Button next_button = findViewById(R.id.edit_text_next_button);
 
         // 과제 5
         close_button.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +100,16 @@ public class edit_text extends AppCompatActivity {
                 }
 
                 phone_editText.setSelection(phone_editText.getText().length());
+            }
+        });
+
+        // 과제 11
+        next_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(edit_text.this, nestedscrollview.class);
+                startActivity(intent);
+                finish();
             }
         });
 

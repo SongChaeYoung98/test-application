@@ -26,5 +26,10 @@
     <string name="edit_text_direct_input">직접입력</string>
     <string name="edit_text_auth_req">인증요청</string>
     <string name="edit_text_next">다음</string>
+    
+    <!-- NestedScrollView -->
+    <string name="nested_title">친구</string>
+    <string name="nested_subtitle">RecyclerView &amp; NestedScrollView 실습</string>
+    <string name="nested_new_friend">새로운 친구</string>
 
 </resources>
