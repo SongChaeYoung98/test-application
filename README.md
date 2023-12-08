@@ -13,6 +13,9 @@
 - Drawable
 - Font
 
+## Download APK
+- [Download](./app-debug.apk)
+
 ## Demonstration  
 ![KakaoTalk_20231208_111810652](https://github.com/SongChaeYoung98/test-application/assets/93585651/c06dfb48-ba70-4392-b074-36f81431e03e)
 
