@@ -51,9 +51,9 @@ public class nestedscrollview_adapter extends RecyclerView.Adapter<nestedscrollv
     }
 
     // Define ViewHolder
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView userNameTextView;
-        public TextView userNumberTextView;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView userNameTextView;
+        private TextView userNumberTextView;
 
         public ViewHolder(View view) {
             super(view);
