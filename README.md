@@ -1,5 +1,5 @@
 # test-application
-신규 사원 교육용
+test-application
 
 ## Context
 - Intent
